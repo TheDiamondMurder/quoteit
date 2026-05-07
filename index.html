@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quoteit</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="quoteit-page" aria-labelledby="page-title">
+      <section class="intro">
+        <div class="brand" aria-label="quoteit">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>quoteit</span>
+        </div>
+
+        <h1 id="page-title">quoteit</h1>
+        <p class="lede">turn a quote into a clean jakublabs-style graphic</p>
+      </section>
+
+      <section class="tool" aria-label="Quote graphic generator">
+        <form class="quote-form" id="quote-form">
+          <label>
+            <span>quote</span>
+            <textarea
+              id="quote"
+              rows="5"
+              placeholder="The quote goes here"
+              required
+            >get rich or die tryin</textarea>
+          </label>
+
+          <div class="field-row">
+            <label>
+              <span>person</span>
+              <input id="person" type="text" value="zonk" required />
+            </label>
+
+            <label>
+              <span>year</span>
+              <input id="year" type="number" value="2023" required />
+            </label>
+          </div>
+
+          <div class="actions">
+            <button class="button button-light" type="submit">Generate</button>
+            <a class="button button-dark" id="download" href="#" download="quoteit.png">
+              Download
+            </a>
+          </div>
+        </form>
+
+        <div class="preview-shell">
+          <canvas
+            id="quote-canvas"
+            width="1200"
+            height="1200"
+            aria-label="Generated quote graphic"
+          ></canvas>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
